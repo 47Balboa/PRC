@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE pr SYSTEM "file:/Users/shahzodyusupov/Desktop/PRC/TPC1/pr/pr.dtd">
+<pr>
+    <meta>
+        <keyname>TPC1</keyname>
+        <title>Trabalho prático 8</title>
+        <subtitle>Processamento e Representaçāo de Conhecimento</subtitle>
+        <bdate>Fevereiro 2020</bdate>
+        <edate>Novembro 2020</edate>
+        <supervisor >
+            <name> José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt </email>
+            <homepage> http://www4.di.uminho.pt/~jcr/ </homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A82617</identifier>
+            <name>Shahzod Yusupov</name>
+            <email>a82617@alunos.uminho.pt</email>
+            <photo path="./PRC/TPC1/pr/foto.jpg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>Este trabalho foi realizado no âmbito da Unidade Curricular de <b>Processamento e Representaçāo de Conhecimento</b></p>
+        <p>Tinha por objetivo usar a ontologia criada na aula , adicionando-lhe duas UCs (PRI e GCS), assim como os alunos listados na spreadsheet referente à avaliacao
+        	de PRI.
+        </p>
+        <p> Foi necessário fazer o download do ficheiro em formato <b>csv </b> e, usando uma script em <b>python </b>  que, para cada aluno, escreve em ficheiro
+           as informações do indivíduo a ser criado na sintaxe <b>Turtle</b>,sendo que este output é adicionado à ontologia inicial</p>
+        <p>  Por fim, foi aplicado o <b>Reasoner</b> do <i>Protegé</i> de modo a obter a ontologia com os axiomas inferidos.
+        </p>
+          
+    </abstract>
+    <deliverables>
+        <deliverable path ="https://github.com/47Balboa/PRC">Git</deliverable>
+        <deliverable path ="https://github.com/47Balboa/PRI/TPC1/pr">ProjectRecord</deliverable>
+        
+        
+    </deliverables>
+</pr>
