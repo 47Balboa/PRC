@@ -1,0 +1,27 @@
+1 - Nomes dos compositores 
+PREFIX : <http://www.semanticweb.org/shahzodyusupov/ontologies/2020/1/arquivo-musica-digital#>
+select ?compositor where { 
+	?obra :compositor ?compositor.
+} 
+
+2 - Titulos de obras do tipo marchas de desfile
+PREFIX : <http://www.semanticweb.org/shahzodyusupov/ontologies/2020/1/arquivo-musica-digital#>
+select ?titulo where { 
+	?obra :tipo "Marcha de Desfile".
+    ?obra :titulo ?titulo .
+} 
+
+3 - Partituras catalogadas por obra
+PREFIX : <http://www.semanticweb.org/shahzodyusupov/ontologies/2020/1/arquivo-musica-digital#>
+select ?obra ?partitura where { 
+	?obra :utiliza ?instrumento.
+    ?instrumento :é_definido_por ?partitura .
+} 
+
+4 - Quais os títulos de obras com partitura para Bombo
+PREFIX : <http://www.semanticweb.org/shahzodyusupov/ontologies/2020/1/arquivo-musica-digital#>
+select ?titulo where { 
+	?obra :utiliza ?instrumento .
+    ?instrumento :designacao "Bombo" .
+    ?obra :titulo ?titulo .
+} 

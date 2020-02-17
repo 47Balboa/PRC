@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE pr SYSTEM "file:/Users/shahzodyusupov/Desktop/PRC/TPC1/pr/pr.dtd">
+<pr>
+    <meta>
+        <keyname>TPC2</keyname>
+        <title>Trabalho de casa 2</title>
+        <subtitle>Processamento e Representaçāo de Conhecimento</subtitle>
+        <bdate>Fevereiro 2020</bdate>
+        <edate>Novembro 2020</edate>
+        <supervisor >
+            <name> José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt </email>
+            <homepage> http://www4.di.uminho.pt/~jcr/ </homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A82617</identifier>
+            <name>Shahzod Yusupov</name>
+            <email>a82617@alunos.uminho.pt</email>
+            <photo path="./PRC/TPC2/pr/foto.jpg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>Este trabalho foi realizado no âmbito da Unidade Curricular de <b>Processamento e Representaçāo de Conhecimento</b></p>
+        <p>Tinha como objetivo a criacao de uma ontologia para o Arquivo de musicas e a resposta a algumas queries sobre o mesmo. Foram criadas 4 classes:
+            <b>obras</b> , <b>partitura</b>, <b>instrumento</b> e <b>inf-relacioanda</b>  e as relacoes entre estas</p>
+        <p>Apos a criacao da ontologia foi aplicada uma <i>stylesheet</i> para trasnformar o ficheiro XML em Turtle. Para  responder às queries, a 
+            ontologia foi importada no <b>GraphDB</b>.</p>
+       
+        
+      
+          
+    </abstract>
+    <deliverables>
+        <deliverable path ="https://github.com/47Balboa/PRC">Git</deliverable>
+        <deliverable path ="https://github.com/47Balboa/PRI/TPC2/pr">ProjectRecord</deliverable>
+        
+        
+    </deliverables>
+</pr>
