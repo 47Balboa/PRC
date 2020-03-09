@@ -1,0 +1,19 @@
+
+ 
+select distinct ?name ?b_date ?gender ?b_place ?d_date ?abstract where{
+   ?swim a dbo:Swimmer.
+   ?swim foaf:name ?name.
+   ?swim foaf:gender ?gender.
+   FILTER (lang(?gender) = 'en')
+   FILTER (lang(?name) = 'en')
+   ?swim dbo:birthDate ?b_date.
+   filter(regex(STR(?b_date), "[0-9]{4}-[0-9]{2}-[0-9]{2}" ))
+   optional {
+       ?swim dbo:birthPlace ?bplace.
+       ?bplace foaf:name ?b_place .
+       ?swim dbo:deathDate ?d_date.
+       filter(regex(STR(?d_date), "[0-9]{4}-[0-9]{2}-[0-9]{2}" ))
+       ?swim dbo:abstract ?abstract.
+       FILTER (lang(?abstract) = 'en')
+   }
+}
