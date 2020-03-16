@@ -1,0 +1,297 @@
+@prefix : <http://prc.di.uminho.pt/2020/compras#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://prc.di.uminho.pt/2020/compras> .
+
+<http://prc.di.uminho.pt/2020/compras> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://prc.di.uminho.pt/2020/compras#compra
+:compra rdf:type owl:ObjectProperty ;
+        owl:inverseOf :éCompradoPor ;
+        rdfs:range :Produto .
+
+
+###  http://prc.di.uminho.pt/2020/compras#vende
+:vende rdf:type owl:ObjectProperty ;
+       owl:inverseOf :éVendidoPor ;
+       rdfs:range :Produto .
+
+
+###  http://prc.di.uminho.pt/2020/compras#éCompradoPor
+:éCompradoPor rdf:type owl:ObjectProperty .
+
+
+###  http://prc.di.uminho.pt/2020/compras#éVendidoPor
+:éVendidoPor rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://prc.di.uminho.pt/2020/compras#codigo
+:codigo rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Produto ;
+        rdfs:range xsd:string .
+
+
+###  http://prc.di.uminho.pt/2020/compras#data_validade
+:data_validade rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Produto ;
+               rdfs:range xsd:string .
+
+
+###  http://prc.di.uminho.pt/2020/compras#designacao
+:designacao rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Produto ;
+            rdfs:range xsd:string .
+
+
+###  http://prc.di.uminho.pt/2020/compras#email
+:email rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Cliente ,
+                   :Loja ;
+       rdfs:range xsd:string .
+
+
+###  http://prc.di.uminho.pt/2020/compras#endereço
+:endereço rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Cliente ,
+                      :Loja ;
+          rdfs:range xsd:string .
+
+
+###  http://prc.di.uminho.pt/2020/compras#nome
+:nome rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Cliente ,
+                  :Loja ;
+      rdfs:range xsd:string .
+
+
+###  http://prc.di.uminho.pt/2020/compras#telefone
+:telefone rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Cliente ,
+                      :Loja ;
+          rdfs:range xsd:int .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://prc.di.uminho.pt/2020/compras#Cliente
+:Cliente rdf:type owl:Class ;
+         rdfs:subClassOf :CompraVenda .
+
+
+###  http://prc.di.uminho.pt/2020/compras#CompraVenda
+:CompraVenda rdf:type owl:Class .
+
+
+###  http://prc.di.uminho.pt/2020/compras#Loja
+:Loja rdf:type owl:Class ;
+      rdfs:subClassOf :CompraVenda .
+
+
+###  http://prc.di.uminho.pt/2020/compras#LojaGrande
+:LojaGrande rdf:type owl:Class ;
+            rdfs:subClassOf :Loja .
+
+
+###  http://prc.di.uminho.pt/2020/compras#Produto
+:Produto rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://prc.di.uminho.pt/2020/compras#Ana
+:Ana rdf:type owl:NamedIndividual ;
+     :compra :p3 ,
+             :p8 ,
+             :p9 ;
+     :email "ana98@gmail.com" ;
+     :endereço "Rua 25 Abril" ;
+     :nome "Ana" ;
+     :telefone 989231234 .
+
+
+###  http://prc.di.uminho.pt/2020/compras#Andre
+:Andre rdf:type owl:NamedIndividual ;
+       :compra :p2 ,
+               :p7 ;
+       :email "andre21@hotmail.com" ;
+       :endereço "Rua das Tilias nrº25" ;
+       :nome "Andre" ;
+       :telefone 923477675 .
+
+
+###  http://prc.di.uminho.pt/2020/compras#Continente
+:Continente rdf:type owl:NamedIndividual ;
+            :vende :p1 ,
+                   :p10 ,
+                   :p2 ,
+                   :p3 ,
+                   :p5 ,
+                   :p6 ;
+            :email "continente@gmail.com" ;
+            :endereço "R. Bernardino Alves Barbosa Santarém,140" ;
+            :nome "Continente" ;
+            :telefone 252233431 .
+
+
+###  http://prc.di.uminho.pt/2020/compras#Joao
+:Joao rdf:type owl:NamedIndividual ;
+      :compra :p10 ,
+              :p4 ;
+      :email "jooao_44@gmail.com" ;
+      :endereço "Avenida da Honra 233" ;
+      :nome "Joao" ;
+      :telefone 912322909 .
+
+
+###  http://prc.di.uminho.pt/2020/compras#Loja_do_Moura
+:Loja_do_Moura rdf:type owl:NamedIndividual ;
+               :vende :p3 ,
+                      :p9 ;
+               :email "mouraa2000@hotmail.com" ;
+               :endereço "Lugar do Xisto Parque Comercial Largo Discount,12" ;
+               :nome "Loja do Moura" ;
+               :telefone 252878677 .
+
+
+###  http://prc.di.uminho.pt/2020/compras#Maria
+:Maria rdf:type owl:NamedIndividual ;
+       :compra :p1 ,
+               :p10 ;
+       :endereço "Rua da Fortaleza nrº212" ,
+                 "mary95@gmail.com" ;
+       :nome "Maria" ;
+       :telefone 915323919 .
+
+
+###  http://prc.di.uminho.pt/2020/compras#Mercearia_da_Carla
+:Mercearia_da_Carla rdf:type owl:NamedIndividual ;
+                    :vende :p4 ,
+                           :p5 ,
+                           :p8 ;
+                    :email "Mercearia da Carla" ,
+                           "mcarla09@gmail.com" ;
+                    :endereço "R. Ferrara Plaza, 90" ;
+                    :telefone 253909123 .
+
+
+###  http://prc.di.uminho.pt/2020/compras#MiniPreço
+:MiniPreço rdf:type owl:NamedIndividual ;
+           :vende :p10 ,
+                  :p4 ,
+                  :p5 ,
+                  :p7 ;
+           :email "minipreco82@hotmail.com" ;
+           :endereço "Av. de São Domingos,8" ;
+           :nome "MiniPreço" ;
+           :telefone 252433546 .
+
+
+###  http://prc.di.uminho.pt/2020/compras#Pingo_Doce
+:Pingo_Doce rdf:type owl:NamedIndividual ;
+            :vende :p1 ,
+                   :p3 ,
+                   :p4 ,
+                   :p8 ;
+            :email "pdoce33@gmail.com" ;
+            :endereço "R. do Vilar,44" ;
+            :nome "Pingo Doce" ;
+            :telefone 253788767 .
+
+
+###  http://prc.di.uminho.pt/2020/compras#Sofia
+:Sofia rdf:type owl:NamedIndividual ;
+       :compra :p1 ,
+               :p4 ,
+               :p7 ;
+       :email "sofs2007@hotmail.com" ;
+       :endereço "Rua do Mercado nrº12" ;
+       :nome "Sofia" ;
+       :telefone 967233910 .
+
+
+###  http://prc.di.uminho.pt/2020/compras#p1
+:p1 rdf:type owl:NamedIndividual ;
+    :codigo "p1" ;
+    :data_validade "12/12/2030" ;
+    :designacao "Limpa Vidros" .
+
+
+###  http://prc.di.uminho.pt/2020/compras#p10
+:p10 rdf:type owl:NamedIndividual ;
+     :codigo "p10" ;
+     :data_validade "03/10/2022" ;
+     :designacao "Polpa de Tomate" .
+
+
+###  http://prc.di.uminho.pt/2020/compras#p2
+:p2 rdf:type owl:NamedIndividual ;
+    :codigo "p2" ;
+    :data_validade "10/04/2020" ;
+    :designacao "Ovos" .
+
+
+###  http://prc.di.uminho.pt/2020/compras#p3
+:p3 rdf:type owl:NamedIndividual ;
+    :codigo "p3" ;
+    :data_validade "10/10/2022" ;
+    :designacao "Sardina em lata" .
+
+
+###  http://prc.di.uminho.pt/2020/compras#p4
+:p4 rdf:type owl:NamedIndividual ;
+    :codigo "p4" ;
+    :data_validade "10/10/2025" ;
+    :designacao "Salsichas em lata" .
+
+
+###  http://prc.di.uminho.pt/2020/compras#p5
+:p5 rdf:type owl:NamedIndividual ;
+    :codigo "p5" ;
+    :data_validade "05/09/2021" ;
+    :designacao "Batatas Fritas" .
+
+
+###  http://prc.di.uminho.pt/2020/compras#p6
+:p6 rdf:type owl:NamedIndividual ;
+    :codigo "p6" ;
+    :data_validade "01/02/2022" ;
+    :designacao "Cerelac" .
+
+
+###  http://prc.di.uminho.pt/2020/compras#p7
+:p7 rdf:type owl:NamedIndividual ;
+    :codigo "p7" ;
+    :data_validade "10/10/2023" ;
+    :designacao "Cereais Chocapic" .
+
+
+###  http://prc.di.uminho.pt/2020/compras#p8
+:p8 rdf:type owl:NamedIndividual ;
+    :codigo "p8" ;
+    :data_validade "05/05/2025" ;
+    :designacao "Chocolate em pó" .
+
+
+###  http://prc.di.uminho.pt/2020/compras#p9
+:p9 rdf:type owl:NamedIndividual ;
+    :codigo "p9" ;
+    :data_validade "20/06/2022" ;
+    :designacao "Bolachas Maria" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

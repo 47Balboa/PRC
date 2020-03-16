@@ -1,0 +1,29 @@
+//Que lojas vendem o produto A?
+PREFIX : <http://prc.di.uminho.pt/2020/compras#>
+select ?loja where {
+    ?s a :Loja .
+    ?s :nome ?loja .
+    ?s :vende ?p .
+    ?p :designacao 'Cerelac' .
+} 
+
+//Que produtos são comprados pelo cliente X ?
+PREFIX : <http://prc.di.uminho.pt/2020/compras#>
+select ?codigo ?produto where {
+    ?s a :Cliente .
+    ?s :nome 'Sofia' .
+    ?s :compra ?p .
+    ?p :designacao ?produto .
+    ?p :codigo ?codigo .
+} 
+
+//Quem são os potenciais clientes da loja Y (Continente)?
+PREFIX : <http://prc.di.uminho.pt/2020/compras#>
+select ?cliente where {
+    ?s a :Cliente .
+    ?loja a :Loja .
+    ?loja :nome 'Continente' .
+    ?s :compra ?p .
+    ?loja :vende ?p .
+    ?s :nome ?cliente .
+} 

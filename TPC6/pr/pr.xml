@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE pr SYSTEM "file:/Users/shahzodyusupov/Desktop/PRC/TPC6/pr/pr.dtd">
+<pr>
+    <meta>
+        <keyname>TPC5</keyname>
+        <title>Trabalho de casa 6</title>
+        <subtitle>Processamento e Representaçāo de Conhecimento</subtitle>
+        <bdate>Fevereiro 2020</bdate>
+        <edate>Março 2020</edate>
+        <supervisor >
+            <name> José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt </email>
+            <homepage> http://www4.di.uminho.pt/~jcr/ </homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A82617</identifier>
+            <name>Shahzod Yusupov</name>
+            <email>a82617@alunos.uminho.pt</email>
+            <photo path="./PRC/TPC6/pr/foto.jpg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>Este trabalho foi realizado no âmbito da Unidade Curricular de <b>Processamento e Representaçāo de Conhecimento</b></p>
+        <p>O exercicio 1 consistia no desenho de um grafo relativo a uma certa ontologia, grafo esse que foi feito no <b>draw.io</b> </p>
+        <p>No exercicio 2 era pedido para construir uma ontologia que tivesse 3 classes: <b>Loja</b>, <b>Cliente</b> e <b>Produto</b>,
+         criar os relacionamentos entre estes e para além disso ter em atencao que instancias de Loja e Produto deviam também fazer parte 
+         de uma outra classe designada <b>CompraVEnda</b>.Para responder a estes reqisitos criei a classe <b>CompraVenda</b> que tem como 
+         subclasses Loja e Produto </p>.
+         <p>Também era pedido para criar instâncias de cada classe e relacionar com as outras classes. Uma outra
+         restrição era o facto de Lojas que vendem mais de 100 produtos devem pertencer a uma outra classe <b>LojaGrande</b>, a qual especifiquei
+         como sendo sublcasse de <b>Loja</b></p>
+         <p> Os exericios 3 e 4 consistiam em fazer queries em SparQL,relacionadas com o DBPedia e Pokemons, respetivamente.
+        
+       
+        
+      
+          
+    </abstract>
+    <deliverables>
+        <deliverable path ="https://github.com/47Balboa/PRC">Git</deliverable>
+        <deliverable path ="https://github.com/47Balboa/PRI/TPC6/pr">ProjectRecord</deliverable>
+        
+        
+    </deliverables>
+</pr>
