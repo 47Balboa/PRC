@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE pr SYSTEM "file:/Users/shahzodyusupov/Desktop/PRC/TPC8/pr/pr.dtd">
+<pr>
+    <meta>
+        <keyname>TPC8</keyname>
+        <title>Trabalho de casa 8</title>
+        <subtitle>Processamento e Representaçāo de Conhecimento</subtitle>
+        <bdate>Março 2020</bdate>
+        <edate>Março 2020</edate>
+        <supervisor >
+            <name> José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt </email>
+            <homepage> http://www4.di.uminho.pt/~jcr/ </homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A82617</identifier>
+            <name>Shahzod Yusupov</name>
+            <email>a82617@alunos.uminho.pt</email>
+            <photo path="./PRC/TPC8/pr/foto.jpg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>Este trabalho foi realizado no âmbito da Unidade Curricular de <b>Processamento e Representaçāo de Conhecimento</b></p>
+        <p>Tinha como objetivo a criação de uma <b>Api</b> para a ontologia sobre o Cinema contruída na aula,cujo objetivo é obter
+         informação através do uso de queries em <b>SPARQL</b> </p>
+        <p>A <b>Api</b> em questão é composta apenas por rotas do tipo <b>GET</b>, para filmes, atores e personagens,listando  os
+         dados de cada uma das enitdades. Para além disso é possível apresentar informação de um entidade em específico através do
+         seu <i>id</i></p>
+        <p>A página de cada ator apresenta o nome, sexo e a lista de filmes em que atua,a página de cada pesonagem apresentam o nome, e 
+         a lista de filmes em que participa, no entanto a página de cada filme apresenta uma grande quantidade de informações:título,
+         data de lançamento,duração,língua,país a lista dos produtores/atores/géneros e personagens referentes ao filme.</p>
+        <p>Para a realização deste exercício foram criadas 3 rotas e 3 controladores, um para cada tipo de entidade.</p>
+        
+       
+        
+      
+          
+    </abstract>
+    <deliverables>
+        <deliverable path ="https://github.com/47Balboa/PRC">Git</deliverable>
+        <deliverable path ="https://github.com/47Balboa/PRI/TPC8/pr">ProjectRecord</deliverable>
+        
+        
+    </deliverables>
+</pr>
