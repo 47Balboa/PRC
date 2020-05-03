@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE pr SYSTEM "file:/Users/shahzodyusupov/Desktop/PRC/TPC11/pr/pr.dtd">
+<pr>
+    <meta>
+        <keyname>TPC11</keyname>
+        <title>Trabalho de casa 11</title>
+        <subtitle>Processamento e Representaçāo de Conhecimento</subtitle>
+        <bdate>Abril 2020</bdate>
+        <edate>Maio 2020</edate>
+        <supervisor >
+            <name> José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt </email>
+            <homepage> http://www4.di.uminho.pt/~jcr/ </homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A82617</identifier>
+            <name>Shahzod Yusupov</name>
+            <email>a82617@alunos.uminho.pt</email>
+            <photo path="./PRC/TPC11/pr/foto.jpg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>Este trabalho foi realizado no âmbito da Unidade Curricular de <b>Processamento e Representaçāo de Conhecimento</b></p>
+        <p>Tinha como objetivo a elaboracão de queries em SPARQL de modo a retirar informacoes sobre a ontologia construida na aula relativa a uma
+            àrvore genalógica. Eram necessárias queries para obter informações sobre familiares de um certo indivíduo, nomeadamente sobre os tios,
+            primos, ancestrais,descendentes,cunhados e os sogros. 
+        <p>  Foram criadas 3 novas relações, nomeadamente <b>hasWife</b> ,<b>hasHusband</b> e <b>hasPartner</b>, recorrendo às queries do tipo
+        <i>Construct</i>, de modo a ser mais fácil obter as informacoes relativas aos cunhados e sogros de um certo indivíduo.</p>
+               
+       
+        
+      
+          
+    </abstract>
+    <deliverables>
+        <deliverable path ="https://github.com/47Balboa/PRC">Git</deliverable>
+        <deliverable path ="https://github.com/47Balboa/PRI/TPC11/pr">ProjectRecord</deliverable>
+        
+        
+    </deliverables>
+</pr>

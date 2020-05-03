@@ -1,0 +1,114 @@
+Queries:
+
+a)Devolver os tios de um individuo
+
+PREFIX : <http://www.di.uminho.pt/prc2020/familyTree#>
+select   ?a ?anome ?t ?tnome where{
+    ?a :name ?anome.
+    ?a :hasParent ?p.
+    ?p :hasSibling ?t.
+    ?t :name ?tnome.
+    filter(?p != ?t).
+    } 
+
+b)Devolver os primos de um individuo
+
+PREFIX : <http://www.di.uminho.pt/prc2020/familyTree#>
+select   ?a ?anome ?p ?pnome where{
+    ?a :name ?anome.
+    ?a :hasParent ?b.
+    ?b :hasSibling ?t.
+    ?t :hasChild ?p.
+    ?p :name ?pnome
+    filter(?b != ?t).
+    } 
+
+c) Devolver os ancestrais de um individuo
+
+PREFIX : <http://www.di.uminho.pt/prc2020/familyTree#>
+select   ?a ?anome ?p ?pnome where{
+    ?a :name ?anome.
+    ?a :hasParent+ ?p.
+    ?p :name ?pnome .
+    } 
+
+d) Devolver os descendentes de um individuo
+
+PREFIX : <http://www.di.uminho.pt/prc2020/familyTree#>
+select   ?a ?anome ?c ?cnome where{
+    ?a :name ?anome.
+    ?a :hasChild+ ?c.
+    ?c :name ?cnome .
+   
+    } 
+
+e) Devolver os cunhados de um individuo
+
+PREFIX : <http://www.di.uminho.pt/prc2020/familyTree#>
+
+
+
+
+CONSTRUCT{
+    ?p :hasWife ?wife.
+    
+}
+where{
+    ?p a :Person.
+    ?p :hasChild ?ch.
+    ?wife :hasChild ?ch.
+    ?wife :sex "F" .
+    filter(?p != ?wife).
+   
+}
+
+----------------------------------------
+
+CONSTRUCT{
+    ?p :hasHusband ?husband.
+    
+}
+where{
+    ?p a :Person.
+    ?p :hasChild ?ch.
+    ?husband :hasChild ?ch.
+    ?husband :sex "M" .
+    filter(?p != ?husband).
+   
+}
+
+------------------------------------------
+CONSTRUCT{
+    ?p :hasPartner ?partner.
+    
+}
+where{
+    ?p a :Person.
+    ?p :hasChild ?ch.
+    ?partner :hasChild ?ch.
+    filter(?p != ?partner).
+   
+}
+
+-----------------------------------------------------
+
+PREFIX : <http://www.di.uminho.pt/prc2020/familyTree#>
+select   ?a ?anome ?t ?tnome where{
+    ?a :name ?anome.
+    ?a :hasPartner ?p.
+    ?p :hasSibling ?t.
+    ?t :name ?tnome.
+    filter(?p != ?t).
+    } 
+
+
+f) Devolver os sogros de um inividuo
+
+PREFIX : <http://www.di.uminho.pt/prc2020/familyTree#>
+select   ?a ?anome ?t ?tnome where{
+    ?a :name ?anome.
+    ?a :hasPartner ?p.
+    ?p :hasParent ?t.
+    ?t :name ?tnome.
+    } 
+
